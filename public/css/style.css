@@ -1,0 +1,261 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100%;
+  background: #ffffff;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 70px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background: #163454;
+  z-index: 9999;
+}
+
+nav .logo {
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  margin: 0 25px;
+  color: #ffffff;
+}
+
+.logo .menu-icon {
+  color: #ffffff;
+  font-size: 30px;
+  margin-right: 14px;
+  cursor: pointer;
+  background-color: #163454;
+  transition: 0.5s;
+}
+
+.logo .menu-icon:hover {
+  background-color: #395e87;
+  border-radius: 5px;
+  transition: 0.3s ease-in-out;
+}
+
+.logo .logo-name {
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+nav .sidebar {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  height: 100%;
+  width: 250px;
+  padding: 20px 0;
+  background-color: #163454;
+  box-shadow: 0 5px 10px rgba(0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+nav.open .sidebar {
+  left: 0;
+}
+
+.sidebar .sidebar-content {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 30px 16px;
+}
+
+.sidebar-content .list {
+  list-style: none;
+}
+
+.list .nav-link {
+  display: flex;
+  align-items: center;
+  padding: 14px 12px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  background-color: #395e87;
+}
+
+.nav-link .icon {
+  margin-right: 14px;
+  font-size: 20px;
+  color: #ffffff;
+}
+
+.nav-link .link {
+  font-size: 16px;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  height: 1000vh;
+  width: 200%;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+nav.open ~ .overlay {
+  opacity: 1;
+  left: 250px;
+  pointer-events: auto;
+}
+
+.landing-page {
+  margin-top: 10px;
+  margin-left: 50px;
+  justify-content: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-image: url("../img/header-bg.jpeg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  mix-blend-mode: darken;
+}
+
+.landing-page h2 {
+  color: #000000;
+  width: 550px;
+  font-size: 70px;
+  font-weight: 1000;
+  max-width: fit-content;
+}
+
+.landing-page p {
+  color: #000000;
+  margin-top: 10px;
+  width: 550px;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.dashboard-info {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: column;
+  background-color: #163454;
+  justify-content: center;
+}
+
+.dashboard-info h2 {
+  color: #ffffff;
+  font-size: 70px;
+  text-align: center;
+  margin: 150px 10px 10px 10px;
+}
+.dashboard-info h2 span {
+  color: #1a5aa3;
+}
+
+.dashboard-info p {
+  font-size: 20px;
+  text-align: center;
+  color: #ffffff;
+  width: 750px;
+  max-width: fit-content;
+  min-width: 1000px;
+  margin-top: 50px;
+  margin-bottom: 250px;
+}
+
+.use-cases {
+  border-radius: 30px 30px 0px 0px;
+  margin-top: 100px;
+  margin-bottom: 80px;
+  text-align: center;
+  font-size: 20px;
+  padding: 40px 20px;
+  background-color: #ffffff;
+}
+
+.use-cases h2 {
+  font-size: 50px;
+}
+
+.use-case-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 100px;
+}
+
+.use-case-box {
+  background: #efefef;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  text-align: center;
+  transition: 0.2s ease-in-out;
+}
+
+.use-case-box:hover {
+  transform: scale(0.9);
+}
+
+.use-case-box .icon {
+  font-size: 40px;
+  color: #163454;
+}
+
+.guide {
+  margin-top: 10px;
+  text-align: center;
+  color: #efefef;
+  padding: 75px 20px;
+  background-color: #0c1b2c;
+  border-radius: 30px 30px 0 0;
+}
+
+.content-guide {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 100px;
+  margin-top: 50px;
+  color: #ffffff;
+}
+
+.box-guide {
+  background: #102335;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  text-align: center;
+  transition: 0.2s ease-in-out;
+}
+
+.box-guide .icon {
+  font-size: 40px;
+  color: #000000;
+}
